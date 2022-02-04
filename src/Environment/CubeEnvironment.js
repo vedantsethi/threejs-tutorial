@@ -70,9 +70,9 @@ class CubeEnvironment extends Component {
 		};
 		
 		this.overlayItem = new OverlayItem(
-			"Soy Cuba", 
+			"Kim iconic", 
 			"VIDEO", 
-			"https://www.youtube.com/embed/BwEabZrGFfI"
+			"https://www.youtube.com/embed/KcDr83kxakg"
 		)
       }
 
@@ -109,15 +109,15 @@ class CubeEnvironment extends Component {
 		this.setDimensions();
 		this.setupCamera();
 		// ADD CONTROLS
-		// this.setupControls();
+		 this.setupControls();
 		this.setupRenderer();
 		
 		// ADD MODELS
 		// this.setupLoadingManager();
 
 		// MAKE INTERACTIVE
-		// this.setupRayCaster()
-		// this.setupMouse()
+		this.setupRayCaster()
+		 this.setupMouse()
 
 		// ADD POST PROCESSING
 		// this.setupPostProcessing();
@@ -131,7 +131,7 @@ class CubeEnvironment extends Component {
      * @memberof CubeEnvironment
      */
 	populateScene = () => {
-		this.addHelpers();
+		//this.addHelpers();
 		this.addLights();
 		// this.addCube( new THREE.Vector3(0,0,0),this.overlayItem);
 		this.addModel(Parrot, new THREE.Vector3(0,0,0), this.overlayItem);
@@ -462,7 +462,7 @@ class CubeEnvironment extends Component {
      */
 	addEventListeners = () => {
 		// MAKE INTERACTIVE
-		// document.addEventListener("dblclick", this.onDocumentDoubleClick, false);
+		document.addEventListener("dblclick", this.onDocumentDoubleClick, false);
 		window.addEventListener('resize', this.handleWindowResize, false);
 	};
 
@@ -473,7 +473,7 @@ class CubeEnvironment extends Component {
 	 */
 	removeEventListeners = () => {
 		// MAKE INTERACTIVE
-		// document.removeEventListener("dblclick", this.onDocumentDoubleClick);
+		document.removeEventListener("dblclick", this.onDocumentDoubleClick);
 		window.removeEventListener('resize', this.handleWindowResize);
 	};
 
@@ -516,11 +516,11 @@ class CubeEnvironment extends Component {
 
 				// MAKE INTERACTIVE
 				// Set the overlay and project
-				// this.setState({
-				// 	pause: true,
-				// 	showOverlay: true,
-				// 	overlayProject: mesh.object.userData.project
-				// });
+				this.setState({
+					pause: true,
+					showOverlay: true,
+					overlayProject: mesh.object.userData.project
+				});
 			}
 		}
 	};

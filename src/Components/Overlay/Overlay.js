@@ -5,7 +5,7 @@ const OverlayWrapper = styled.div`
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0, 255, 0);
+	background: black;
 	display: ${(props) => (props.show ? 'block' : 'none')};
 `;
 
